@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
-
 .container {
     margin-right: auto;
 	margin-left: auto;
@@ -13,7 +9,7 @@
 }
 
 body {
-    background-color: #EDF0F5;
+    background-color: #ebecf0;
     color: #092C4C;
 }
 
@@ -30,10 +26,16 @@ header {
     background-color: #fff;
     padding: 10px 0;
     font-family: 'Montserrat';
+    font-weight: 500;
     margin-top: 25px;
     margin-bottom: 30px;
     border-radius: 30px;
     box-shadow: 0px 8px 40px rgba(9, 44, 76, 0.16);
+}
+
+.opacity-zero {
+    position: absolute;
+    opacity: 0;
 }
 
 .header-box {
@@ -43,7 +45,6 @@ header {
 
 .nav-list {
     display: flex;
-    font-weight: 500;
 }
 
 .nav-item {
@@ -78,12 +79,97 @@ header {
     min-height: 700px;
     border-radius: 30px;
     box-shadow: 0px 8px 40px rgba(9, 44, 76, 0.16);
-    font-family: 'Inter';
-    padding: 30px 50px;
+    font-family: 'TT Commons';
+    padding: 40px 80px;
 }
 
 .page-title {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 45px;
     margin: 0;
+}
+
+.page-desc {
+    font-size: 19px;
+}
+
+.calc-formula {
+    margin-top: 40px;
+}
+
+.calc-title {
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.formula-form {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.formula-form label {
+    font-size: 28px;
+    margin-top: 3px;
+}
+
+.formula-form input {
+    font-family: 'Inter';
+    margin-left: 10px;
+    margin-right: 20px;
+    outline: none;
+    border: 1px solid rgba(9, 44, 76, 0.2);
+    border-radius: 4px;
+    height: 26px;
+    font-size: 18px;
+    padding-left: 3px;
+    width: 100px;
+}
+
+.formula-form button {
+    color: white;
+    background-color: #092C4C;
+    padding: 7px 12px 4px 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.formula-form button:hover {
+    opacity: 0.9;
+}
+
+.formula-box {
+    margin-top: 20px;
+    padding: 20px 15px;
+    background-color: rgba(9, 44, 76, 0.15);
+    border-radius: 15px;
+    width: fit-content;
+    min-width: 200px;
+    transition: 0.5s;
+}
+
+.formula-anwer {
+    font-size: 32px;
+    position: relative;
+    margin: 0;
+}
+
+.formula-anwer sup {
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+
+.formula-anwer sub {
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.form-ans {
+    margin-left: 25px;
 }

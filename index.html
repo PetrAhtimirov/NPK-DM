@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Combinatorics</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/adding-fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
 </head>
 <body class="container">
@@ -27,7 +28,25 @@
         </div>
     </header>
     <section class="page-content">
-        <h1 class="page-title">Сочетания</h1>
+        <div class="page-info">
+            <h1 class="page-title">Сочетания</h1>
+            <p class="page-desc">Сочетаниями из n элементов по k называются соединения, которые можно образовать из n элементов, собирая в каждое соединение k элементов; при этом соединения отличаются друг от друга только самими элементами (различие порядка их расположения во внимание не принимается).</p>
+        </div>
+        <div class="calc-formula">
+            <h2 class="calc-title">Посчитать количество сочетаний</h2>
+            <img class="formula" src="formulas\Сombinations.webp" height="90px" alt="Формула подсчета количества сочетаний">
+            <form class="formula-form" action="">
+                <label for="n">n =</label>
+                <input type="text" id="n" onkeypress="validate(event)">
+                <label for="k">k =</label>
+                <input type="text" id="k" onkeypress="validate(event)">
+                <button type="submit">Вычислить</button>
+            </form>
+            <div class="formula-box opacity-zero">
+                <p class="formula-anwer">C<sup id="answer-k"></sup><sub id="answer-n"></sub><span class="form-ans" id="answer">= </span></p>
+            </div>
+        </div>
     </section>
+    <script src="js\scripts.js"></script>
 </body>
 </html>
