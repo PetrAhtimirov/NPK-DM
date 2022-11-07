@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сочетания</title>
+    <title>Перестановки</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/adding-fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -14,14 +14,14 @@
         <div class="header-box">
             <nav>
                 <ul class="nav-list">
-                    <li class="nav-item active">
-                        <a href="#">Сочетания</a>
+                    <li class="nav-item">
+                        <a href="/NPK-DM">Сочетания</a>
                     </li>
                     <li class="nav-item">
                         <a href="/NPK-DM/accommodation">Размещения</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/NPK-DM/permutations">Перестановки</a>
+                    <li class="nav-item active">
+                        <a href="#">Перестановки</a>
                     </li>
                 </ul>
             </nav>
@@ -29,24 +29,22 @@
     </header>
     <section class="page-content">
         <div class="page-info">
-            <h1 class="page-title">Сочетания</h1>
-            <p class="page-desc">Сочетаниями из n элементов по k называются соединения, которые можно образовать из n элементов, собирая в каждое соединение k элементов; при этом соединения отличаются друг от друга только самими элементами (различие порядка их расположения во внимание не принимается).</p>
+            <h1 class="page-title">Перестановки</h1>
+            <p class="page-desc">Перестановкой называются наборы, состоящие из одного и того же числа элементов, отличающихся только порядком следования элементов.</p>
         </div>
         <div class="calc-formula">
-            <h2 class="calc-title">Посчитать количество сочетаний</h2>
-            <img class="formula" src="formulas\Сombinations.webp" height="90px" alt="Формула подсчета количества сочетаний">
-            <form class="formula-form combinations-form" action="">
+            <h2 class="calc-title">Посчитать количество перестановок</h2>
+            <img class="formula" src="formulas\Permutations.webp" height="90px" alt="Формула подсчета количества размещений">
+            <form class="formula-form permutations-form" action="">
                 <label for="n">n =</label>
                 <input type="text" id="n" onkeypress="validate(event)">
-                <label for="k">k =</label>
-                <input type="text" id="k" onkeypress="validate(event)">
                 <button type="submit">Вычислить</button>
             </form>
             <div class="formula-box opacity-zero">
-                <p class="formula-anwer">C<sup id="answer-k"></sup><sub id="answer-n"></sub><span class="form-ans" id="answer">= </span></p>
+                <p class="formula-anwer">P<sub id="answer-n"></sub><span class="form-ans" id="answer">= </span></p>
             </div>
             <div class="ans-box">
-                <button type="button" id="see-all" class="button-see opacity-zero">Посмотреть сочетания</button>
+                <button type="button" id="see-all" class="button-see opacity-zero">Посмотреть перестановки</button>
                 <label class="ans-txt opacity-zero" for="ans-txt">Ответ</label>
                 <textarea class="opacity-zero" name="ans-txt" id="ans-txt" cols="30" rows="10" disabled></textarea>
             </div>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сочетания</title>
+    <title>Размещения</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/adding-fonts.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -14,11 +14,11 @@
         <div class="header-box">
             <nav>
                 <ul class="nav-list">
-                    <li class="nav-item active">
-                        <a href="#">Сочетания</a>
-                    </li>
                     <li class="nav-item">
-                        <a href="/NPK-DM/accommodation">Размещения</a>
+                        <a href="/NPK-DM">Сочетания</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#">Размещения</a>
                     </li>
                     <li class="nav-item">
                         <a href="/NPK-DM/permutations">Перестановки</a>
@@ -29,24 +29,24 @@
     </header>
     <section class="page-content">
         <div class="page-info">
-            <h1 class="page-title">Сочетания</h1>
-            <p class="page-desc">Сочетаниями из n элементов по k называются соединения, которые можно образовать из n элементов, собирая в каждое соединение k элементов; при этом соединения отличаются друг от друга только самими элементами (различие порядка их расположения во внимание не принимается).</p>
+            <h1 class="page-title">Размещения</h1>
+            <p class="page-desc">Размещением (из n по k) называется упорядоченный набор из k различных элементов из некоторого множества различных n элементов. (то есть совпадают как сочетания).</p>
         </div>
         <div class="calc-formula">
-            <h2 class="calc-title">Посчитать количество сочетаний</h2>
-            <img class="formula" src="formulas\Сombinations.webp" height="90px" alt="Формула подсчета количества сочетаний">
-            <form class="formula-form combinations-form" action="">
+            <h2 class="calc-title">Посчитать количество размещений</h2>
+            <img class="formula" src="formulas\Accommodation.webp" height="90px" alt="Формула подсчета количества размещений">
+            <form class="formula-form accommodation-form" action="">
                 <label for="n">n =</label>
                 <input type="text" id="n" onkeypress="validate(event)">
-                <label for="k">k =</label>
-                <input type="text" id="k" onkeypress="validate(event)">
+                <label for="m">m =</label>
+                <input type="text" id="m" onkeypress="validate(event)">
                 <button type="submit">Вычислить</button>
             </form>
             <div class="formula-box opacity-zero">
-                <p class="formula-anwer">C<sup id="answer-k"></sup><sub id="answer-n"></sub><span class="form-ans" id="answer">= </span></p>
+                <p class="formula-anwer">A<sup id="answer-m"></sup><sub id="answer-n"></sub><span class="form-ans" id="answer">= </span></p>
             </div>
             <div class="ans-box">
-                <button type="button" id="see-all" class="button-see opacity-zero">Посмотреть сочетания</button>
+                <button type="button" id="see-all" class="button-see opacity-zero">Посмотреть размещения</button>
                 <label class="ans-txt opacity-zero" for="ans-txt">Ответ</label>
                 <textarea class="opacity-zero" name="ans-txt" id="ans-txt" cols="30" rows="10" disabled></textarea>
             </div>
