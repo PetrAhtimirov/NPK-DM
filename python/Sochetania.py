@@ -6,6 +6,7 @@ def COM(x, m):
     arr = []
     for i in combinations(x, m):
         arr.append(i)
+    print(*arr)
     return arr
 
 def senddata(event):
