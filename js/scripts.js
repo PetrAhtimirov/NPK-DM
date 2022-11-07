@@ -23,7 +23,58 @@ let combinations = function (event) {
     ans = document.getElementById('answer');
     ans.textContent = "= " + (factorial(n)/(factorial(k) * factorial(n-k)))
     ansbox.classList.remove('opacity-zero')
+
+    let see_button = document.getElementById('see-all')
+    see_button.classList.remove('opacity-zero')
 }
 
-let calcForm = document.querySelector(".formula-form")
-calcForm.addEventListener('submit', combinations);
+let accommodation = function (event) {
+    event.preventDefault();
+    ansbox = document.querySelector('.formula-box')
+    n = Number(document.getElementById('n').value)
+    m = Number(document.getElementById('m').value)
+    document.getElementById('answer-n').textContent = n
+    document.getElementById('answer-m').textContent = m
+    ans = document.getElementById('answer');
+    ans.textContent = "= " + (factorial(n)/factorial(n-m))
+    ansbox.classList.remove('opacity-zero')
+
+    let see_button = document.getElementById('see-all')
+    see_button.classList.remove('opacity-zero')
+}
+
+let permutations = function (event) {
+    event.preventDefault();
+    ansbox = document.querySelector('.formula-box')
+    n = Number(document.getElementById('n').value)
+    document.getElementById('answer-n').textContent = n
+    ans = document.getElementById('answer');
+    ans.textContent = "= " + (factorial(n))
+    ansbox.classList.remove('opacity-zero')
+
+    let see_button = document.getElementById('see-all')
+    see_button.classList.remove('opacity-zero')
+}
+
+if (document.querySelector(".combinations-form")) {
+    let combinationsForm = document.querySelector(".combinations-form")
+    combinationsForm.addEventListener('submit', combinations);
+}
+
+if (document.querySelector(".combinations-form")) {
+    let accommodationForm = document.querySelector(".accommodation-form")
+    accommodationForm.addEventListener('submit', accommodation);
+}
+
+if (document.querySelector(".permutations-form")) {
+    let permutationsForm = document.querySelector(".permutations-form")
+    permutationsForm.addEventListener('submit', permutations);
+}
+
+let seeAll = document.getElementById('see-all');
+
+seeAll.onclick = function (event) {
+    event.preventDefault();
+    document.getElementById('see-all').classList.add('d-none');
+    document.getElementById('ans-txt').classList.remove('opacity-zero');
+}
