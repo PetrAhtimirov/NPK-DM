@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+@font-face {
+    font-family: 'TT Commons';
+    src: local('TT Commons Light'), local('TTCommons-Light'),
+        url('../fonts/TTCommons-Light.woff') format('woff'),
+        url('../fonts/TTCommons-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: local('TT Commons Regular'), local('TTCommons-Regular'),
+        url('../fonts/TTCommons-Regular.woff') format('woff'),
+        url('../fonts/TTCommons-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: local('TT Commons Bold'), local('TTCommons-Bold'),
+        url('../fonts/TTCommons-Bold.woff') format('woff'),
+        url('../fonts/TTCommons-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    src: local('TT Commons Medium'), local('TTCommons-Medium'),
+        url('../fonts/TTCommons-Medium.woff') format('woff'),
+        url('../fonts/TTCommons-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
 .container {
     margin-right: auto;
 	margin-left: auto;
@@ -30,7 +72,7 @@ header {
     background-color: #fff;
     padding: 10px 0;
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 25px;
     margin-bottom: 30px;
     border-radius: 30px;
@@ -38,6 +80,7 @@ header {
 }
 
 .opacity-zero {
+    height: 0;
     opacity: 0;
 }
 
@@ -91,13 +134,14 @@ header {
 
 .page-content {
     background-color: #fff;
-    width: 100%;
-    height: 82vh;
+    width: 1100px;
+    min-height: 400px;
     min-height: 700px;
     border-radius: 30px;
     box-shadow: 0px 8px 40px rgba(9, 44, 76, 0.16);
     font-family: 'TT Commons';
     padding: 40px 80px;
+    margin-bottom: 40px;
 }
 
 .page-title {
@@ -202,13 +246,32 @@ button {
 }
 
 textarea {
-    margin-top: 0px;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 18px;
     outline: none;
     border: none;
     border-radius: 10px;
     background-color: rgba(9, 44, 76, 0.15);
     resize: none;
     width: 450px;
-    height: 240px;
+    height: 400px;
     font-family: monospace;
+    color: #092C4C !important;
+}
+
+textarea::-webkit-scrollbar {
+    width: 7px;
+    background-color: #f9f9fd;
+  }
+  
+textarea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #A8A8A8;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    background-color: #f9f9fd;
 }
