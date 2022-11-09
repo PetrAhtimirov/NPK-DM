@@ -310,6 +310,7 @@ textarea::-webkit-scrollbar-track {
     color:rgba(9, 44, 76, 0.45);
     font-family: 'Inter';
     font-size: 14px;
+    z-index: -1;
 }
 
 .person-link {
