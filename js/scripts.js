@@ -21,11 +21,15 @@ let combinations = function (event) {
     document.getElementById('answer-n').textContent = n
     document.getElementById('answer-k').textContent = k
     ans = document.getElementById('answer');
-    ans.textContent = "= " + (factorial(n)/(factorial(k) * factorial(n-k)))
+    let otv = Math.floor(factorial(n)/(factorial(k) * factorial(n-k)))
+    ans.textContent = "= " + otv
     ansbox.classList.remove('opacity-zero')
 
-    let see_button = document.getElementById('see-all')
-    see_button.classList.remove('opacity-zero')
+    if (otv <= 1000) {
+        let see_button = document.getElementById('see-all')
+        see_button.classList.remove('d-none')
+        see_button.classList.remove('opacity-zero')  
+    }
 
     if(document.getElementById('ans-txt').classList.contains('active') == 0) {
         document.getElementById('ans-txt').classList.add('opacity-zero')
@@ -40,11 +44,15 @@ let accommodation = function (event) {
     document.getElementById('answer-n').textContent = n
     document.getElementById('answer-m').textContent = m
     ans = document.getElementById('answer');
-    ans.textContent = "= " + (factorial(n)/factorial(n-m))
+    let otv = Math.floor(factorial(n)/factorial(n-m))
+    ans.textContent = "= " + otv
     ansbox.classList.remove('opacity-zero')
 
-    let see_button = document.getElementById('see-all')
-    see_button.classList.remove('opacity-zero')
+    if (otv <= 1000) {
+        let see_button = document.getElementById('see-all')
+        see_button.classList.remove('d-none')
+        see_button.classList.remove('opacity-zero')  
+    }
 
     if(document.getElementById('ans-txt').classList.contains('active') == 0) {
         document.getElementById('ans-txt').classList.add('opacity-zero')
@@ -57,11 +65,15 @@ let permutations = function (event) {
     n = Number(document.getElementById('n').value)
     document.getElementById('answer-n').textContent = n
     ans = document.getElementById('answer');
-    ans.textContent = "= " + (factorial(n))
+    let otv = factorial(n)
+    ans.textContent = "= " + otv
     ansbox.classList.remove('opacity-zero')
 
-    let see_button = document.getElementById('see-all')
-    see_button.classList.remove('opacity-zero')
+    if (otv <= 1000) {
+        let see_button = document.getElementById('see-all')
+        see_button.classList.remove('d-none')
+        see_button.classList.remove('opacity-zero')  
+    }
 
     if(document.getElementById('ans-txt').classList.contains('active') == 0) {
         document.getElementById('ans-txt').classList.add('opacity-zero')
@@ -88,5 +100,6 @@ let seeAll = document.getElementById('see-all');
 seeAll.onclick = function (event) {
     event.preventDefault();
     document.getElementById('see-all').classList.add('opacity-zero');
+    document.getElementById('see-all').classList.add('d-none');
     document.getElementById('ans-txt').classList.remove('opacity-zero');
 }
